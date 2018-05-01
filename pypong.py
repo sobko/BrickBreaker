@@ -4,7 +4,7 @@ import pygame
 def run_game():
     #initial setup
     pygame.init()
-    screen = pygame.display.set_mode((800, 800))
+    screen = pygame.display.set_mode((1200, 800))
     pygame.display.set_caption("BrickBreaker")
     
     #create variables
@@ -12,7 +12,7 @@ def run_game():
     ball = pygame.image.load("ball.png")
     ball_x = 150
     ball_y = 400
-
+    
     #game loop
 
     while True:
@@ -37,6 +37,5 @@ def run_game():
         #show the new screen
         
         pygame.display.flip()
-
 
 run_game()
