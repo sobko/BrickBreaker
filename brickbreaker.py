@@ -9,19 +9,21 @@ def run_game():
     
     #create variables
     
-    ball = pygame.image.load("ball.png")
+    ball_image = pygame.image.load("ball.png")
     ball_x = 150
     ball_y = 400
 
+    running = True
+
     #game loop
 
-    while True:
+    while running:
         #changes based on events
         
         for event in pygame.event.get():
             if event.type == pygame.KEYDOWN:
                 if event.key == pygame.K_q:
-                    pygame.quit()
+                    running = False
                     
         #automatic changes
                     
@@ -32,11 +34,13 @@ def run_game():
         
         #then stuff on top of the screen
         
-        screen.blit(ball, (ball_x, ball_y))
+        screen.blit(ball_image, (ball_x, ball_y))
         
         #show the new screen
         
         pygame.display.flip()
+        
+    pygame.quit()
 
 
 run_game()
